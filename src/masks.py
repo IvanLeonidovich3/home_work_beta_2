@@ -10,7 +10,7 @@ def account_mask(account_number: int) -> str:
     """получает и маскируетмаску счета"""
     get_account = account_number
     str_account = str(get_account)
-    mask_account = "*" * len(str_account[:-4]) + str_account[-4:]
+    mask_account = "*" * len(str_account[:2]) + str_account[-4:]
     return mask_account
 
 
