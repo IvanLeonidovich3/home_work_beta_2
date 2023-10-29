@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def mask_count_card(card_name: str, count_card: int) -> str:
     """принимает на вход строку информацией тип карты/счета и номер карты/счета
     card_name - имя крты и её номер
@@ -23,3 +26,13 @@ def mask_count_card(card_name: str, count_card: int) -> str:
     str_account = str(count_card)
     mask_account = "*" * len(str_account[:2]) + str_account[-4:]  # маскирую счет
     return f'{print_words} \nCчет {mask_account}'
+
+
+def date_time(date_string: str) -> str:
+    """получает дату из стоки"""
+    str_dat = date_string[:10]
+    print_dat = datetime.strptime(str_dat, '%Y-%m-%d')
+    return print_dat
+
+
+
