@@ -14,6 +14,4 @@ def account_mask(account_number: int) -> str:
     return mask_account
 
 
-print(mask_card(7000792289606361))
-print()
-print(account_mask(73654108430135874305))
+
