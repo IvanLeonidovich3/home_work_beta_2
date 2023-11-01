@@ -7,3 +7,10 @@ def sort_state(sort_list: list) -> list:
     return new_list
 
 
+def sort_data(data_list: list) -> list:
+    """сортирует список словарей по убыванию даты"""
+    sort_list = []
+    for sorting in data_list:
+        sort_list.append(sorting)
+        get_sort = sorted(sort_list, key=lambda d: d['date'], reverse=True)
+    return get_sort
